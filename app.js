@@ -15,3 +15,4 @@ const marker_z_brod = L.marker([50.64, 15.25]).addTo(map); // San Francisco, CA 
 // Add a popup to the marker
 marker_praha.bindPopup("<b>Hello!</b><br>Praha").openPopup();
 marker_smrzovka.bindPopup("<b>Hello!</b><br>Smržovka").openPopup();
+marker_z_brod.bindPopup("<b>Hello!</b><br>Železný Brod").openPopup();
