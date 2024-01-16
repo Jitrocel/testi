@@ -13,3 +13,15 @@
 .blink {
   animation: blink 1s infinite; /* Adjust the duration as needed */
 }
+
+.center{
+  text-align:center;
+}
+
+.left{
+  text-align:left;
+}
+
+.right{
+  text-align:right;
+}
