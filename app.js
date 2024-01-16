@@ -1,5 +1,5 @@
 // Initialize the map
-const map = L.map('map').setView([50, 15], 8); // Default view at coordinates [51, 15] and zoom level 5
+const map = L.map('map').setView([49.8, 15], 8); // Default view at coordinates [51, 15] and zoom level 5
 
 // Add a tile layer (you can choose different providers, like Mapbox)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
