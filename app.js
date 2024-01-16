@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Add a marker at a specific location
-const marker = L.marker([37.7749, -122.4194]).addTo(map); // San Francisco, CA coordinates
+const marker = L.marker([51, 15]).addTo(map); // San Francisco, CA coordinates
 
 // Add a popup to the marker
-marker.bindPopup("<b>Hello!</b><br>This is San Francisco.").openPopup();
+marker.bindPopup("<b>Hello!</b><br>This is Prague.").openPopup();
