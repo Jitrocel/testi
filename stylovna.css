@@ -35,8 +35,44 @@
 
 /* fonty */
 
-.arial{
-  font-family:arial;
+.Arial {
+    font-family: Arial, sans-serif;
+}
+
+.Verdana {
+    font-family: Verdana, sans-serif;
+}
+
+.Helvetica {
+    font-family: Helvetica, sans-serif;
+}
+
+.Tahoma {
+    font-family: Tahoma, sans-serif;
+}
+
+.Trebuchet_MS {
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.Arial_Serif {
+    font-family: Arial, sans-serif;
+}
+
+.Verdana_Serif {
+    font-family: Verdana, sans-serif;
+}
+
+.Tahoma_Serif {
+    font-family: Tahoma, sans-serif;
+}
+
+.Courier_New {
+    font-family: "Courier New", sans-serif;
+}
+
+.Lucida_Console {
+    font-family: "Lucida Console", sans-serif;
 }
 
 .opensans{
