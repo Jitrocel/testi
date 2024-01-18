@@ -9,12 +9,12 @@ var data = [
 ];
 
 var rumData = [
-    { "year": 1970, "price": 1.5 },
-    { "year": 1971, "price": 0.7 },
-    { "year": 1972, "price": 1.6 },
-    { "year": 2001, "price": 5.5 },
+    { "year": 1970, "price": 18 },
+    { "year": 1971, "price": 20 },
+    { "year": 1972, "price": 16 },
+    { "year": 2001, "price": 60 },
     // ...
-    { "year": 2020, "price": 2.5 }
+    { "year": 2020, "price": 120 }
 ];
 
 var svg = d3.select("body")
