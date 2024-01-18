@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mapa ČR</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <style>
-        #map { height: 100vh; width: 100%; }
-    </style>
-</head>
-<body>
-    <div id="map"></div>
-    <script>
-        // Inicializace mapy
+// Inicializace mapy
 var map = L.map('map').setView([49.8175, 15.4730], 7); // Nastavení středu mapy na Českou republiku
 
 // Přidání vrstvy s mapovými dlaždicemi
@@ -56,13 +43,15 @@ var cities = {
         {"type": "Feature", "properties": {"name": "Tábor"}, "geometry": {"type": "Point", "coordinates": [14.6578, 49.4144]}}
     ]
 };
+// Funkce pro zobrazení názvu města při najetí myší
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.name) {
+        layer.bindTooltip(feature.properties.name);
+    }
+}
 
 // Přidání bodů na mapu
-L.geoJSON(cities).addTo(map);
-    </script>
-</body>
-</html>
-
-
-
+L.geoJSON(cities, {
+    onEachFeature: onEachFeature
+}).addTo(map);
 
