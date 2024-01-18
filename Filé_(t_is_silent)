@@ -1,0 +1,49 @@
+// Inicializace mapy
+var map = L.map('map').setView([49.8175, 15.4730], 7); // Nastavení středu mapy na Českou republiku
+
+// Přidání vrstvy s mapovými dlaždicemi
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Data okresních měst v České republice
+var cities = {
+    "type": "FeatureCollection",
+    "features": [
+        {"type": "Feature", "properties": {"name": "Praha"}, "geometry": {"type": "Point", "coordinates": [14.4378, 50.0755]}},
+        {"type": "Feature", "properties": {"name": "Brno"}, "geometry": {"type": "Point", "coordinates": [16.6068, 49.1951]}},
+        {"type": "Feature", "properties": {"name": "Ostrava"}, "geometry": {"type": "Point", "coordinates": [18.2550, 49.8413]}},
+        {"type": "Feature", "properties": {"name": "Plzeň"}, "geometry": {"type": "Point", "coordinates": [13.4045, 49.7384]}},
+        {"type": "Feature", "properties": {"name": "Liberec"}, "geometry": {"type": "Point", "coordinates": [15.0760, 50.7707]}},
+        {"type": "Feature", "properties": {"name": "Olomouc"}, "geometry": {"type": "Point", "coordinates": [17.2512, 49.5938]}},
+        {"type": "Feature", "properties": {"name": "České Budějovice"}, "geometry": {"type": "Point", "coordinates": [14.4750, 48.9757]}},
+        {"type": "Feature", "properties": {"name": "Hradec Králové"}, "geometry": {"type": "Point", "coordinates": [15.8311, 50.2092]}},
+        {"type": "Feature", "properties": {"name": "Pardubice"}, "geometry": {"type": "Point", "coordinates": [15.7816, 50.0405]}},
+        {"type": "Feature", "properties": {"name": "Ústí nad Labem"}, "geometry": {"type": "Point", "coordinates": [14.0292, 50.6626]}},
+        {"type": "Feature", "properties": {"name": "Zlín"}, "geometry": {"type": "Point", "coordinates": [17.4648, 49.2269]}},
+        {"type": "Feature", "properties": {"name": "Havířov"}, "geometry": {"type": "Point", "coordinates": [18.4305, 49.7798]}},
+        {"type": "Feature", "properties": {"name": "Kladno"}, "geometry": {"type": "Point", "coordinates": [14.1038, 50.1473]}},
+        {"type": "Feature", "properties": {"name": "Most"}, "geometry": {"type": "Point", "coordinates": [13.6394, 50.5033]}},
+        {"type": "Feature", "properties": {"name": "Opava"}, "geometry": {"type": "Point", "coordinates": [17.9026, 49.9382]}},
+        {"type": "Feature", "properties": {"name": "Frýdek-Místek"}, "geometry": {"type": "Point", "coordinates": [18.3550, 49.6854]}},
+        {"type": "Feature", "properties": {"name": "Jihlava"}, "geometry": {"type": "Point", "coordinates": [15.5794, 49.3961]}},
+        {"type": "Feature", "properties": {"name": "Teplice"}, "geometry": {"type": "Point", "coordinates": [13.8362, 50.6402]}},
+        {"type": "Feature", "properties": {"name": "Karviná"}, "geometry": {"type": "Point", "coordinates": [18.5403, 49.8569]}},
+        {"type": "Feature", "properties": {"name": "Karlovy Vary"}, "geometry": {"type": "Point", "coordinates": [12.8750, 50.2311]}},
+        {"type": "Feature", "properties": {"name": "Děčín"}, "geometry": {"type": "Point", "coordinates": [14.2147, 50.7805]}},
+        {"type": "Feature", "properties": {"name": "Chomutov"}, "geometry": {"type": "Point", "coordinates": [13.4106, 50.4612]}},
+        {"type": "Feature", "properties": {"name": "Jablonec nad Nisou"}, "geometry": {"type": "Point", "coordinates": [15.1685, 50.7245]}},
+        {"type": "Feature", "properties": {"name": "Mladá Boleslav"}, "geometry": {"type": "Point", "coordinates": [14.9120, 50.4113]}},
+        {"type": "Feature", "properties": {"name": "Prostějov"}, "geometry": {"type": "Point", "coordinates": [17.1262, 49.4716]}},
+        {"type": "Feature", "properties": {"name": "Přerov"}, "geometry": {"type": "Point", "coordinates": [17.4527, 49.4532]}},
+        {"type": "Feature", "properties": {"name": "Česká Lípa"}, "geometry": {"type": "Point", "coordinates": [14.5378, 50.6855]}},
+        {"type": "Feature", "properties": {"name": "Třebíč"}, "geometry": {"type": "Point", "coordinates": [15.8817, 49.2149]}},
+        {"type": "Feature", "properties": {"name": "Třinec"}, "geometry": {"type": "Point", "coordinates": [18.6775, 49.6774]}},
+        {"type": "Feature", "properties": {"name": "Tábor"}, "geometry": {"type": "Point", "coordinates": [14.6578, 49.4144]}}
+    ]
+};
+
+// Přidání bodů na mapu
+L.geoJSON(cities).addTo(map);
+Kód vygenerovaný AI. Pečlivě si je projděte a používejte. Další informace v nejčastějších dotazech.
