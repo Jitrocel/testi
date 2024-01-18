@@ -13,7 +13,7 @@
 
 /* třídy */
 
-.blink {
+.blikání {
   animation: blink 1s infinite; /* Adjust the duration as needed */
 }
 
@@ -23,11 +23,11 @@
   text-align:center;
 }
 
-.left{
+.vlevo{
   text-align:left;
 }
 
-.right{
+.vpravo{
   text-align:right;
 }
 
