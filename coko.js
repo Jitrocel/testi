@@ -96,3 +96,25 @@ svg.selectAll("dot")
             .duration(500)
             .style("opacity", 0);
     });
+
+
+// Přidání tooltipu pro data rumu
+svg.selectAll("dot")
+    .data(rumData)
+    .enter().append("circle")
+    .attr("r", 5)
+    .attr("cx", function(d) { return x(d.year); })
+    .attr("cy", function(d) { return y(d.price); })
+    .on("mouseover", function(d) {
+        tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+        tooltip.html("Rok: " + d.year + "<br/>"  + "Cena: " + d.price)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 28) + "px");
+    })
+    .on("mouseout", function(d) {
+        tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
+    });
