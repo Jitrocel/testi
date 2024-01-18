@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Open Sans")
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -17,6 +19,8 @@
   animation: blink 1s infinite; /* Adjust the duration as needed */
 }
 
+/* pozice textu */
+
 .center{
   text-align:center;
 }
@@ -27,4 +31,14 @@
 
 .right{
   text-align:right;
+}
+
+/* fonty */
+
+.arial{
+  font-family:arial;
+}
+
+.opensans{
+  font-family:Open Sans;
 }
