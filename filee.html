@@ -1,4 +1,17 @@
-// Inicializace mapy
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa ČR</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map { height: 100vh; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Inicializace mapy
 var map = L.map('map').setView([49.8175, 15.4730], 7); // Nastavení středu mapy na Českou republiku
 
 // Přidání vrstvy s mapovými dlaždicemi
@@ -55,3 +68,7 @@ L.geoJSON(cities, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
+
+    </script>
+</body>
+</html>
