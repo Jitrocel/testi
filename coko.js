@@ -1,6 +1,6 @@
 // Fiktivní data ve formátu JSON
 var data = [
-    { "year": 1970, "price": 1.2 },
+    { "year": 1970, "price": 1.2 kč},
     { "year": 1971, "price": 0.5 },
     { "year": 1972, "price": 1.4 },
     { "year": 2001, "price": 5 },
