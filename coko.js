@@ -1,4 +1,3 @@
-// Fiktivní data ve formátu JSON
 var data = [
     { "year": 1970, "price": 1.2 },
     { "year": 1971, "price": 0.5 },
@@ -87,7 +86,7 @@ svg.selectAll("dot")
         tooltip.transition()
             .duration(200)
             .style("opacity", .9);
-        tooltip.html("Rok: " + d.year + "<br/>"  + "Cena: " + d.price)
+        tooltip.html("Rok: " + d.year + "<br/>"  + "Cena: " + d.price + "Kč")
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY - 28) + "px");
     })
